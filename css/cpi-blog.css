@@ -1,0 +1,264 @@
+/* ===========================================
+   CPI Blog Post Styles
+   Extends the existing design system
+   =========================================== */
+
+/* Post Meta */
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color--border--default);
+  margin-bottom: 2rem;
+}
+
+.post-meta__category {
+  background-color: var(--color--brand--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius--sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.post-meta__date,
+.post-meta__read-time {
+  color: var(--color--feedback--color--text--primary);
+  font-size: 0.875rem;
+}
+
+.post-meta__separator {
+  color: var(--color--border--default);
+}
+
+/* Featured Image */
+.post-featured-image {
+  width: 100%;
+  border-radius: var(--radius--md);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.post-featured-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+/* Quote Block - Enhanced version of existing .qoute */
+.post-quote {
+  background-color: var(--color--surface--alt);
+  border-left: 4px solid var(--color--brand--primary);
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 0 var(--radius--md) var(--radius--md) 0;
+}
+
+.post-quote__text {
+  font-size: 1.375rem;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--color--feedback--color--text--primary);
+  margin-bottom: 1rem;
+}
+
+.post-quote__attribution {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color--brand--accent--blue);
+}
+
+/* Highlight Box / Callout */
+.post-callout {
+  background: linear-gradient(135deg, var(--color--brand--accent--blue) 0%, #175e99 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: var(--radius--md);
+  margin: 2rem 0;
+}
+
+.post-callout__title {
+  font-family: 'Orelega One', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-callout__content {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+/* Stats Grid */
+.post-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.post-stat {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color--surface--alt);
+  border-radius: var(--radius--md);
+}
+
+.post-stat__number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color--brand--primary);
+  line-height: 1.2;
+}
+
+.post-stat__label {
+  font-size: 1rem;
+  color: var(--color--feedback--color--text--primary);
+  margin-top: 0.5rem;
+}
+
+/* Image with Caption */
+.post-image-block {
+  margin: 2rem 0;
+}
+
+.post-image-block img {
+  width: 100%;
+  border-radius: var(--radius--md);
+}
+
+.post-image-block__caption {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Two-column content within post */
+.post-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin: 2rem 0;
+}
+
+/* Author Box */
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--color--surface--alt);
+  border-radius: var(--radius--md);
+  margin-top: 3rem;
+}
+
+.post-author__image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-author__name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--color--brand--primary);
+}
+
+.post-author__role {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Share Buttons */
+.post-share {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.post-share__label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.post-share__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color--surface--alt);
+  color: var(--color--feedback--color--text--primary);
+  transition: all 0.3s ease;
+}
+
+.post-share__button:hover {
+  background-color: var(--color--brand--accent--blue);
+  color: white;
+}
+
+/* Back to News Button */
+.back-to-news {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color--brand--accent--blue);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color--brand--accent--blue);
+  border-radius: var(--radius--sm);
+  transition: all 0.3s ease;
+}
+
+.back-to-news:hover {
+  background-color: var(--color--brand--accent--blue);
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 991px) {
+  .post-two-column {
+    grid-template-columns: 1fr;
+  }
+  
+  .post-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .post-quote {
+    padding: 1.5rem;
+  }
+  
+  .post-quote__text {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .post-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .post-author {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .post-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Sat Dec 27 2025 20:37:00 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Sun Dec 28 2025 23:44:23 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="69503acec5171e5c6d98eb4c" data-wf-site="68b1c10f3f32492f9e67d3f6">
 <head>
   <meta charset="utf-8">
@@ -34,14 +34,16 @@
     document.querySelectorAll(selectors).forEach(el => {
       el.classList.add('fade-in');
     });
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.15
+      threshold: 0, // ← أول ما يظهر أي جزء منه
+      rootMargin: '50px 0px 0px 0px' // ← يبدأ حتى قبل ما يدخل الشاشة بـ 50px
     });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   });
@@ -340,7 +342,7 @@ CPI NAVBAR - EXTENDED BREAKPOINT + STICKY (v5 - FINAL)
   .navbar2_menu-dropdown {
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     padding-left: 2rem;
     font-size: 1.125rem;
     display: flex;
@@ -351,9 +353,10 @@ CPI NAVBAR - EXTENDED BREAKPOINT + STICKY (v5 - FINAL)
     margin-right: 0;
     padding: 0 2rem 0 0;
     display: flex;
+		justify-content: space-between;
   }
   .navbar_dropdwn-toggle.w--open {
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
   }
   .navbar_link {
@@ -419,7 +422,7 @@ CPI NAVBAR - EXTENDED BREAKPOINT + STICKY (v5 - FINAL)
   pointer-events: none;
 }
 .navbar_component.is-sticky .navbar-logo .image.logo {
-  content: url('images/logo_minimal.svg') !important;
+  content: url('https://cdn.prod.website-files.com/68b1c10f3f32492f9e67d3f6/69518ca6f4987c1aaec6b0f1_logo_minimal.svg') !important;
   height: 35px;
   width: auto;
 }
