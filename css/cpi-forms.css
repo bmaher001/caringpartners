@@ -332,7 +332,7 @@
   background-color: var(--cpi-gray-light);
   color: var(--cpi-text);
   border: 0.0625rem solid #ddd;
-  border-radius: 0.5rem;
+  border-radius: var(--radius--sm);
   padding: 0.875rem 2rem;
   font-size: 1rem;
   font-weight: 600;
