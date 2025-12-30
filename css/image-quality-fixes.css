@@ -60,6 +60,3 @@ img[srcset] {
 }
 
 /* Exclude header photos from height: auto */
-img[srcset]:not(.header-photo) {
-  height: auto;
-}
