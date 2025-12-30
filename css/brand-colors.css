@@ -1,0 +1,69 @@
+/* ==========================================
+   CPI BRAND COLORS - REFERENCE FILE
+   ==========================================
+   
+   This file contains the official brand colors
+   for Caring Partners International website.
+   
+   DO NOT EDIT - For reference only
+   ========================================== */
+
+/* ==========================================
+   PRIMARY BRAND COLOR
+   ========================================== */
+   
+--color-primary: #8C1F1F;        /* Dark Red - Main brand color */
+
+
+/* ==========================================
+   ACCENT COLORS
+   ========================================== */
+
+--color-accent-orange: #F37021;  /* Orange */
+--color-accent-green: #679F68;   /* Green */
+--color-accent-blue: #1F78C1;    /* Blue */
+
+
+/* ==========================================
+   USAGE GUIDELINES
+   ========================================== */
+
+/*
+   Primary Red (#8C1F1F):
+   - H1 headings
+   - H2 headings
+   - Section titles
+   
+   Blue (#1F78C1):
+   - H3 headings
+   - Buttons (non-donate)
+   - Links
+   - Category badges
+   - Pagination
+   - Active/selected states
+   - View all button
+   - Interactive elements
+   
+   Orange (#F37021):
+   - Donate button
+   - Call-to-action highlights
+   - Prayer Requests category badge (optional)
+   
+   Green (#679F68):
+   - Partner Updates category badge (optional)
+   - Success messages
+*/
+
+
+/* ==========================================
+   CSS VARIABLES FOR USE IN STYLESHEETS
+   ========================================== */
+
+/*
+:root {
+  --brand-primary: #8C1F1F;
+  --brand-orange: #F37021;
+  --brand-green: #679F68;
+  --brand-blue: #1F78C1;
+}
+*/

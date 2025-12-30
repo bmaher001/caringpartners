@@ -1,0 +1,307 @@
+/* ========================================
+   FULL-PAGE LOTTIE ANIMATION FOR DONATION SUCCESS
+   ======================================== */
+
+/* Full-Page Lottie Overlay - Must be at page level */
+.fullpage-lottie-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    background: rgba(255, 255, 255, 0.95);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fullpage-lottie-overlay.active {
+    display: flex;
+}
+
+/* Lottie Container - Large and responsive */
+.fullpage-lottie-container {
+    width: 80vw;
+    height: 50vh;
+    max-width: 600px;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullpage-lottie-container svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Success Text */
+.fullpage-lottie-text {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.fullpage-lottie-text h2 {
+    font-family: 'Orelega One', sans-serif;
+    font-size: 3rem;
+    color: #1F78C1;
+    margin: 0 0 10px 0;
+}
+
+.fullpage-lottie-text p {
+    font-size: 1.25rem;
+    color: #666;
+    margin: 0 0 30px 0;
+    line-height: 1.6;
+}
+
+.fullpage-lottie-text button {
+    background: #1F78C1;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.fullpage-lottie-text button:hover {
+    background: #165a94;
+    transform: scale(1.05);
+}
+
+/* Donation Destination Display */
+.success-destination {
+    font-size: 1.1rem;
+    color: #1F78C1;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.success-destination .destination-label {
+    color: #666;
+    font-weight: 400;
+}
+
+/* Payment Iframe Modal */
+.payment-iframe-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.payment-iframe-modal.active {
+    display: flex;
+}
+
+.payment-iframe-container {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.payment-iframe-header {
+    background: #1F78C1;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.payment-iframe-header h3 {
+    margin: 0;
+    font-family: 'Orelega One', sans-serif;
+    font-size: 1.25rem;
+}
+
+.payment-iframe-header p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.payment-iframe {
+    width: 100%;
+    height: 480px;
+    border: none;
+    flex: 1;
+}
+
+.payment-iframe-actions {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.payment-iframe-actions .confirm-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.payment-iframe-actions .confirm-btn:hover {
+    background: #218838;
+    transform: scale(1.02);
+}
+
+.payment-iframe-actions .cancel-btn {
+    background: transparent;
+    border: 2px solid #C41E3A;
+    color: #C41E3A;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.payment-iframe-actions .cancel-btn:hover {
+    background: #C41E3A;
+    color: white;
+}
+
+.payment-iframe-note {
+    padding: 10px 20px;
+    background: #fff3cd;
+    color: #856404;
+    font-size: 0.85rem;
+    text-align: center;
+    border-top: 1px solid #ffc107;
+}
+
+@media (max-width: 600px) {
+    .payment-iframe-container {
+        max-height: 90vh;
+    }
+
+    .payment-iframe {
+        height: 400px;
+    }
+
+    .payment-iframe-actions {
+        flex-direction: column;
+    }
+
+    .payment-iframe-actions button {
+        width: 100%;
+    }
+}
+
+/* Demo Mode Badge */
+.demo-mode-badge {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #C41E3A;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 9999;
+    box-shadow: 0 2px 10px rgba(196, 30, 58, 0.4);
+}
+
+/* Processing Overlay */
+.processing-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.processing-overlay.active {
+    display: flex;
+}
+
+.processing-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #1F78C1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.processing-text {
+    color: white;
+    font-size: 1.25rem;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .fullpage-lottie-container {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .fullpage-lottie-text h2 {
+        font-size: 2rem;
+    }
+
+    .fullpage-lottie-text p {
+        font-size: 1rem;
+    }
+
+    .fullpage-lottie-text button {
+        padding: 12px 40px;
+        font-size: 1rem;
+    }
+
+    .demo-mode-badge {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+}

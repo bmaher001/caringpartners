@@ -1,0 +1,65 @@
+/* ========================================
+   IMAGE QUALITY FIXES FOR CPI WEBSITE
+   Fixes pixelation caused by incorrect Webflow sizes attributes
+   ======================================== */
+
+/* Improve rendering quality for all images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* High-DPI display optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: auto;
+  }
+}
+
+/* Ensure header photos render at full quality */
+.header-photo {
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Hero slider images */
+.img-hero-slider {
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Blog/news card images */
+.rl_blog44_image {
+  image-rendering: auto;
+}
+
+/* General content images */
+.rl_header1_image,
+.placeholder-image,
+.placeholder-image-2 {
+  image-rendering: auto;
+}
+
+/* CTA images */
+.cta1_image {
+  image-rendering: auto;
+}
+
+/* Event images */
+.event8_image {
+  image-rendering: auto;
+}
+
+/* Ensure smooth scaling for responsive images */
+img[srcset] {
+  max-width: 100%;
+}
+
+/* Exclude header photos from height: auto */
+img[srcset]:not(.header-photo) {
+  height: auto;
+}

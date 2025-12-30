@@ -12,6 +12,7 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/caring-partners-international-1264c9.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/shared-styles.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -132,15 +133,15 @@
   }
 
   .rl_blog8_menu-link:hover {
-    color: var(--color--brand--primary, #8c1f1f);
-    background-color: rgba(140, 31, 31, 0.05);
+    color: #1F78C1;
+    background-color: rgba(31, 120, 193, 0.05);
   }
 
   .rl_blog8_menu-link.current {
-    border: 1px solid var(--color--brand--primary, #8c1f1f) !important;
-    color: var(--color--brand--primary, #8c1f1f) !important;
+    border: 1px solid #1F78C1 !important;
+    color: #1F78C1 !important;
     font-weight: 600;
-    background-color: rgba(140, 31, 31, 0.08);
+    background-color: rgba(31, 120, 193, 0.08);
   }
 
   /* ========================================
@@ -172,12 +173,12 @@
 
   .category-dropdown-toggle:hover,
   .category-dropdown-toggle:focus {
-    border-color: var(--color--brand--primary, #8c1f1f);
+    border-color: #1F78C1;
     outline: none;
   }
 
   .category-dropdown-toggle.open {
-    border-color: var(--color--brand--primary, #8c1f1f);
+    border-color: #1F78C1;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -199,7 +200,7 @@
     left: 0;
     right: 0;
     background: #fff;
-    border: 1px solid var(--color--brand--primary, #8c1f1f);
+    border: 1px solid #1F78C1;
     border-top: none;
     border-radius: 0 0 8px 8px;
     z-index: 100;
@@ -227,12 +228,12 @@
 
   .category-dropdown-option:hover,
   .category-dropdown-option:focus {
-    background-color: rgba(140, 31, 31, 0.05);
+    background-color: rgba(31, 120, 193, 0.05);
     outline: none;
   }
 
   .category-dropdown-option.active {
-    background-color: var(--color--brand--primary, #8c1f1f);
+    background-color: #1F78C1;
     color: white;
     font-weight: 600;
   }
@@ -254,23 +255,16 @@
 
   /* ========================================
      FEATURED POST RESPONSIVE
+     Clean style - no frames, just subtle zoom
      ======================================== */
   .rl_blog8_featured-list-wrapper {
     margin-bottom: 1.5rem;
     padding: 0.5rem;
   }
 
-  .rl_blog8_featured-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: var(--radius--md, 8px);
+  /* Image zoom on hover */
+  .rl_blog8_featured-image-wrapper {
     overflow: hidden;
-    border: 1px solid #f0f0f0;
-  }
-
-  .rl_blog8_featured-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    border-color: transparent;
   }
 
   .rl_blog8_featured-image {
@@ -279,10 +273,6 @@
 
   .rl_blog8_featured-item:hover .rl_blog8_featured-image {
     transform: scale(1.05);
-  }
-  
-  .rl_blog8_featured-image-wrapper {
-    overflow: hidden;
   }
 
   .rl_blog8_featured-item-wrapper {
@@ -355,6 +345,7 @@
 
   /* ========================================
      BLOG GRID RESPONSIVE
+     Clean style - no frames, just subtle zoom
      ======================================== */
   .rl_blog8_list-wrapper {
     padding: 0.5rem;
@@ -367,18 +358,13 @@
   }
 
   .rl_blog8_item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    border-radius: var(--radius--md, 8px);
-    overflow: hidden;
-    background: #fff;
-    padding: 1rem;
-    border: 1px solid #f0f0f0;
+    transition: opacity 0.3s ease;
   }
 
-  .rl_blog8_item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-    border-color: transparent;
+  /* Image zoom on hover */
+  .rl_blog8_image-wrapper {
+    overflow: hidden;
+    aspect-ratio: 3/2;
   }
 
   .rl_blog8_image {
@@ -386,40 +372,11 @@
   }
 
   .rl_blog8_item:hover .rl_blog8_image {
-    transform: scale(1.08);
-  }
-
-  .rl_blog8_image-wrapper {
-    overflow: hidden;
-    border-radius: var(--radius--sm, 4px);
-    aspect-ratio: 3/2;
+    transform: scale(1.05);
   }
 
   .rl_blog8_item-content {
     padding: 1rem 0.25rem 0.25rem 0.25rem;
-  }
-
-  /* Title Hover */
-  .rl-heading-style-h5-2,
-  .rl-heading-style-h4 {
-    transition: color 0.2s ease;
-  }
-
-  .rl_blog8_item:hover .rl-heading-style-h5-2,
-  .rl_blog8_featured-item:hover .rl-heading-style-h4 {
-    color: var(--color--brand--primary, #8c1f1f);
-  }
-
-  /* Read More Link Hover */
-  .rl-button-link-2 {
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-flex;
-  }
-
-  .rl_blog8_item:hover .rl-button-link-2,
-  .rl_blog8_featured-item:hover .rl-button-link-2 {
-    color: var(--color--brand--primary, #8c1f1f);
-    transform: translateX(5px);
   }
 
   /* Line clamp for excerpts */
@@ -576,14 +533,14 @@
   }
 
   .pagination-btn:hover:not(.disabled):not(.active) {
-    border-color: var(--color--brand--primary, #8c1f1f);
-    color: var(--color--brand--primary, #8c1f1f);
-    background-color: rgba(140, 31, 31, 0.05);
+    border-color: #1F78C1;
+    color: #1F78C1;
+    background-color: rgba(31, 120, 193, 0.05);
   }
 
   .pagination-btn.active {
-    background-color: var(--color--brand--primary, #8c1f1f);
-    border-color: var(--color--brand--primary, #8c1f1f);
+    background-color: #1F78C1;
+    border-color: #1F78C1;
     color: white;
   }
 
@@ -760,7 +717,7 @@
                   <div class="rl_blog8_featured-item-content">
                     <div class="rl_blog8_item-content-top">
                       <div class="rl_blog8_meta-wrapper">
-                        <div class="rl_blog8_category" style="background-color: #8c1f1f; color: white;">
+                        <div class="rl_blog8_category mission-trips">
                           <div class="rl_blog8_category-text">Mission Trips</div>
                         </div>
                         <div class="rl_blog8_read-time-text">5 min read</div>
@@ -799,7 +756,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #8c1f1f; color: white;">
+                      <div class="rl_blog8_category mission-trips">
                         <div class="rl_blog8_category-text">Mission Trips</div>
                       </div>
                       <div class="rl_blog8_read-time-text">7 min read</div>
@@ -831,7 +788,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #1f78c1; color: white;">
+                      <div class="rl_blog8_category volunteer-stories">
                         <div class="rl_blog8_category-text">Volunteer Stories</div>
                       </div>
                       <div class="rl_blog8_read-time-text">5 min read</div>
@@ -863,7 +820,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #679f68; color: white;">
+                      <div class="rl_blog8_category partner-updates">
                         <div class="rl_blog8_category-text">Partner Updates</div>
                       </div>
                       <div class="rl_blog8_read-time-text">4 min read</div>
@@ -895,7 +852,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #f37021; color: white;">
+                      <div class="rl_blog8_category prayer-requests">
                         <div class="rl_blog8_category-text">Prayer Requests</div>
                       </div>
                       <div class="rl_blog8_read-time-text">3 min read</div>
@@ -927,7 +884,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #679f68; color: white;">
+                      <div class="rl_blog8_category partner-updates">
                         <div class="rl_blog8_category-text">Partner Updates</div>
                       </div>
                       <div class="rl_blog8_read-time-text">4 min read</div>
@@ -959,7 +916,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #1f78c1; color: white;">
+                      <div class="rl_blog8_category volunteer-stories">
                         <div class="rl_blog8_category-text">Volunteer Stories</div>
                       </div>
                       <div class="rl_blog8_read-time-text">6 min read</div>
@@ -991,7 +948,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #8c1f1f; color: white;">
+                      <div class="rl_blog8_category mission-trips">
                         <div class="rl_blog8_category-text">Mission Trips</div>
                       </div>
                       <div class="rl_blog8_read-time-text">5 min read</div>
@@ -1023,7 +980,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #f37021; color: white;">
+                      <div class="rl_blog8_category prayer-requests">
                         <div class="rl_blog8_category-text">Prayer Requests</div>
                       </div>
                       <div class="rl_blog8_read-time-text">2 min read</div>
@@ -1055,7 +1012,7 @@
                 <div class="rl_blog8_item-content">
                   <div class="rl_blog8_item-content-top">
                     <div class="rl_blog8_meta-wrapper">
-                      <div class="rl_blog8_category" style="background-color: #1f78c1; color: white;">
+                      <div class="rl_blog8_category volunteer-stories">
                         <div class="rl_blog8_category-text">Volunteer Stories</div>
                       </div>
                       <div class="rl_blog8_read-time-text">4 min read</div>

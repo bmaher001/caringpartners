@@ -1,0 +1,140 @@
+/* ==========================================
+   CPI SHARED STYLES
+   ==========================================
+   
+   Shared CSS styles used across multiple pages
+   to ensure consistency throughout the website.
+   
+   ========================================== */
+
+/* ==========================================
+   CATEGORY BADGES - UNIFIED COLORS
+   ==========================================
+   Used in: index.html, ministry-news.html
+   Classes: .rl_blog44_category, .rl_blog8_category
+   ========================================== */
+
+/* Base badge styles */
+.rl_blog44_category,
+.rl_blog8_category {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white !important;
+  display: inline-block;
+}
+
+/* Mission Trips - Primary Red */
+.rl_blog44_category.mission-trips,
+.rl_blog8_category.mission-trips,
+.category-mission-trips {
+  background-color: #8C1F1F !important;
+}
+
+/* Volunteer Stories - Blue */
+.rl_blog44_category.volunteer-stories,
+.rl_blog8_category.volunteer-stories,
+.category-volunteer-stories {
+  background-color: #1F78C1 !important;
+}
+
+/* Partner Updates - Green */
+.rl_blog44_category.partner-updates,
+.rl_blog8_category.partner-updates,
+.category-partner-updates {
+  background-color: #679F68 !important;
+}
+
+/* Prayer Requests - Orange */
+.rl_blog44_category.prayer-requests,
+.rl_blog8_category.prayer-requests,
+.category-prayer-requests {
+  background-color: #F37021 !important;
+}
+
+/* Default fallback - Blue */
+.rl_blog44_category:not([class*="mission"]):not([class*="volunteer"]):not([class*="partner"]):not([class*="prayer"]),
+.rl_blog8_category:not([class*="mission"]):not([class*="volunteer"]):not([class*="partner"]):not([class*="prayer"]) {
+  background-color: #1F78C1 !important;
+}
+
+
+/* ==========================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ==========================================
+   Unified blue color for buttons, pagination,
+   and interactive states
+   ========================================== */
+
+/* View all / Category menu buttons */
+.rl_blog8_menu-link:hover {
+  color: #1F78C1;
+  background-color: rgba(31, 120, 193, 0.05);
+}
+
+.rl_blog8_menu-link.current {
+  border: 1px solid #1F78C1 !important;
+  color: #1F78C1 !important;
+  font-weight: 600;
+  background-color: rgba(31, 120, 193, 0.08);
+}
+
+/* Pagination */
+.pagination-btn:hover:not(.disabled):not(.active) {
+  border-color: #1F78C1;
+  color: #1F78C1;
+  background-color: rgba(31, 120, 193, 0.05);
+}
+
+.pagination-btn.active {
+  background-color: #1F78C1;
+  border-color: #1F78C1;
+  color: white;
+}
+
+
+/* ==========================================
+   CARD HOVER EFFECTS
+   ==========================================
+   Clean style - no frames, just subtle zoom
+   ========================================== */
+
+/* Home page cards */
+.rl_blog44_image-wrapper {
+  overflow: hidden;
+}
+
+.rl_blog44_image {
+  transition: transform 0.4s ease;
+}
+
+.rl_blog44_item:hover .rl_blog44_image {
+  transform: scale(1.05);
+}
+
+/* News page cards */
+.rl_blog8_image-wrapper {
+  overflow: hidden;
+}
+
+.rl_blog8_image {
+  transition: transform 0.4s ease;
+}
+
+.rl_blog8_item:hover .rl_blog8_image {
+  transform: scale(1.05);
+}
+
+/* Featured post */
+.rl_blog8_featured-image-wrapper {
+  overflow: hidden;
+}
+
+.rl_blog8_featured-image {
+  transition: transform 0.4s ease;
+}
+
+.rl_blog8_featured-item:hover .rl_blog8_featured-image {
+  transform: scale(1.05);
+}
